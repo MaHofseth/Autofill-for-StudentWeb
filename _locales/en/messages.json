@@ -1,0 +1,70 @@
+{
+  "lang": {
+    "message": "en"
+  },
+  "extName": {
+    "message": "StudentWeb Default Institution"
+  },
+  "extDescription": {
+    "message": "Remembers your StudentWeb institution and login method, and skips the pages that ask for them."
+  },
+  "instLabel": {
+    "message": "Default institution"
+  },
+  "none": {
+    "message": "(none)"
+  },
+  "clear": {
+    "message": "Clear"
+  },
+  "clearInstTitle": {
+    "message": "Clear saved institution"
+  },
+  "methodLabel": {
+    "message": "Default login method"
+  },
+  "clearMethodTitle": {
+    "message": "Clear saved login method"
+  },
+  "methodAsk": {
+    "message": "Ask me (do nothing)"
+  },
+  "methodFeide": {
+    "message": "Feide"
+  },
+  "methodFnr": {
+    "message": "Fødselsnummer and PIN"
+  },
+  "methodIdporten": {
+    "message": "ID-porten"
+  },
+  "methodHint": {
+    "message": "Feide and ID-porten are clicked for you. For fødselsnummer and PIN, the cursor is placed in the field; nothing is stored or filled in."
+  },
+  "methodReset": {
+    "message": "$METHOD$ isn't offered at $INST$, so the login method was reset.",
+    "placeholders": {
+      "method": {
+        "content": "$1"
+      },
+      "inst": {
+        "content": "$2"
+      }
+    }
+  },
+  "skipHeading": {
+    "message": "Skip pages"
+  },
+  "skipInst": {
+    "message": "Skip StudentWeb's institution page and go straight to login"
+  },
+  "feideAuto": {
+    "message": "On Feide's \"choose affiliation\" page, continue automatically"
+  },
+  "saved": {
+    "message": "Saved"
+  },
+  "cleared": {
+    "message": "Cleared"
+  }
+}

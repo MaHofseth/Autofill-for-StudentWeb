@@ -23,33 +23,33 @@
   <div class="columns">
     <div>
       <div class="field">
-        <label for="inst">Default institution</label>
+        <label for="inst" data-i18n="instLabel"></label>
         <div class="select-row">
           <select id="inst"></select>
-          <button id="clear" title="Clear saved institution">Clear</button>
+          <button id="clear" data-i18n="clear" data-i18n-title="clearInstTitle"></button>
         </div>
       </div>
 
       <div class="field">
-        <label for="method">Default login method</label>
+        <label for="method" data-i18n="methodLabel"></label>
         <div class="select-row">
           <select id="method"></select>
-          <button id="clearMethod" title="Clear saved login method">Clear</button>
+          <button id="clearMethod" data-i18n="clear" data-i18n-title="clearMethodTitle"></button>
         </div>
         <p class="hint" id="methodNote" hidden></p>
-        <p class="hint">Feide and ID-porten are clicked for you. For fødselsnummer and PIN, the cursor is placed in the field; nothing is stored or filled in.</p>
+        <p class="hint" data-i18n="methodHint"></p>
       </div>
     </div>
 
     <div class="options">
-      <h2>Skip pages</h2>
+      <h2 data-i18n="skipHeading"></h2>
       <div class="check">
         <input type="checkbox" id="auto">
-        <label for="auto">Skip StudentWeb's institution page and go straight to login</label>
+        <label for="auto" data-i18n="skipInst"></label>
       </div>
       <div class="check">
         <input type="checkbox" id="feideAuto">
-        <label for="feideAuto">On Feide's "choose affiliation" page, continue automatically</label>
+        <label for="feideAuto" data-i18n="feideAuto"></label>
       </div>
       <span id="status" role="status"></span>
     </div>

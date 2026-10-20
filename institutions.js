@@ -37,6 +37,44 @@ const DEFAULT_INSTITUTIONS = [
   { code: "FSVID", name: "VID Specialized University" },
 ];
 
+// Norwegian (bokmål) names, from the same page in Norsk bokmål (2026-10-20).
+const NB_NAMES = {
+  FSATH: "Ansgar høyskole",
+  FSAHO: "Arkitektur- og designhøgskolen i Oslo",
+  FSBDUE: "Barratt Due musikkinstitutt",
+  FSDMMH: "Dronning Mauds Minne Høgskole for barnehagelærerutdanning",
+  FSFIH: "Fjellhaug Internasjonale Høgskole",
+  FSMIL: "Forsvarets høgskole",
+  FSHIM: "Høgskolen i Molde - Vitenskapelig høgskole i logistikk",
+  FSHIOF: "Høgskolen i Østfold",
+  FSHVO: "Høgskulen i Volda",
+  FSHVL: "Høgskulen på Vestlandet",
+  FSHK: "Høyskolen Kristiania",
+  FSKRUS: "Kriminalomsorgens høgskole og utdanningssenter KRUS",
+  FSKHIO: "Kunsthøgskolen i Oslo",
+  FSLDH: "Lovisenberg diakonale høgskole",
+  FSMF: "MF vitenskapelig høyskole for teologi, religion og samfunn",
+  FSNLA: "NLA Høgskolen",
+  FSNORD: "Nord universitet",
+  FSNHH: "Norges Handelshøyskole",
+  FSNIH: "Norges idrettshøgskole",
+  FSNMBU: "Norges miljø- og biovitenskapelige universitet",
+  FSNMH: "Norges musikkhøgskole",
+  FSNTNU: "Norges teknisk-naturvitenskapelige universitet",
+  FSNUC: "Noroff School of technology and digital media",
+  FSOSLOMET: "OsloMet - storbyuniversitetet",
+  FSPHS: "Politihøgskolen",
+  FSSA: "Sámi allaskuvla/Sámi University of Applied Sciences",
+  FSUIT: "UiT Norges arktiske universitet",
+  FSUIA: "Universitetet i Agder",
+  FSUIB: "Universitetet i Bergen",
+  FSHINN: "Universitetet i Innlandet",
+  FSUIO: "Universitetet i Oslo",
+  FSUIS: "Universitetet i Stavanger",
+  FSHSN: "Universitetet i Sørøst-Norge",
+  FSVID: "VID vitenskapelige høgskole",
+};
+
 // Login methods shown on each institution's login page (scanned 2026-10-20).
 // login.js updates this in storage (methodsByInst) whenever a login page is visited.
 const ALL_METHODS = { feide: "Feide", fnr: "Fødselsnummer and PIN", idporten: "ID-porten" };

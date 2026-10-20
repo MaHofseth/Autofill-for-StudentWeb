@@ -1,0 +1,70 @@
+{
+  "lang": {
+    "message": "nb"
+  },
+  "extName": {
+    "message": "StudentWeb standardinstitusjon"
+  },
+  "extDescription": {
+    "message": "Husker institusjonen og innloggingsmetoden din i StudentWeb, og hopper over sidene som spør om dem."
+  },
+  "instLabel": {
+    "message": "Standard institusjon"
+  },
+  "none": {
+    "message": "(ingen)"
+  },
+  "clear": {
+    "message": "Fjern"
+  },
+  "clearInstTitle": {
+    "message": "Fjern lagret institusjon"
+  },
+  "methodLabel": {
+    "message": "Standard innloggingsmetode"
+  },
+  "clearMethodTitle": {
+    "message": "Fjern lagret innloggingsmetode"
+  },
+  "methodAsk": {
+    "message": "Spør meg (velg manuelt)"
+  },
+  "methodFeide": {
+    "message": "Feide"
+  },
+  "methodFnr": {
+    "message": "Fødselsnummer og PIN"
+  },
+  "methodIdporten": {
+    "message": "ID-porten"
+  },
+  "methodHint": {
+    "message": "Feide og ID-porten klikkes for deg. For fødselsnummer og PIN settes markøren i feltet; ingenting lagres eller fylles ut."
+  },
+  "methodReset": {
+    "message": "$METHOD$ tilbys ikke ved $INST$, så innloggingsmetoden ble nullstilt.",
+    "placeholders": {
+      "method": {
+        "content": "$1"
+      },
+      "inst": {
+        "content": "$2"
+      }
+    }
+  },
+  "skipHeading": {
+    "message": "Hopp over sider"
+  },
+  "skipInst": {
+    "message": "Hopp over StudentWebs institusjonsside og gå rett til innlogging"
+  },
+  "feideAuto": {
+    "message": "Fortsett automatisk på Feides «Velg tilhørighet»-side"
+  },
+  "saved": {
+    "message": "Lagret"
+  },
+  "cleared": {
+    "message": "Fjernet"
+  }
+}
