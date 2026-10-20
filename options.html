@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 12px; min-width: 300px; }
+    label { display: block; margin: 10px 0 4px; }
+    select { width: 100%; padding: 4px; }
+    .row { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
+    .row label { margin: 0; }
+    button { margin-top: 12px; }
+    #status { color: #2a7; margin-left: 8px; }
+    .hint { color: #777; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <label for="inst">Default institution</label>
+  <select id="inst"></select>
+
+  <div class="row">
+    <input type="checkbox" id="auto">
+    <label for="auto">Skip the page and go straight to login</label>
+  </div>
+
+  <label for="method">Default login method</label>
+  <select id="method">
+    <option value="">Ask me (do nothing)</option>
+    <option value="feide">Feide</option>
+    <option value="fnr">Fødselsnummer and PIN</option>
+    <option value="idporten">ID-porten</option>
+  </select>
+  <p class="hint">Feide and ID-porten are clicked for you. For fødselsnummer and PIN, the cursor is placed in the field; nothing is stored or filled in.</p>
+
+  <button id="clear">Clear saved institution</button><span id="status"></span>
+  <script src="institutions.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

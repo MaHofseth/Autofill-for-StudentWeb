@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "StudentWeb Default Institution",
+  "version": "1.2.1",
+  "description": "Remembers your institution on the StudentWeb 'Choose institution' page and preselects it (or skips the page), and picks your default login method.",
+  "icons": {
+    "48": "icon.svg",
+    "96": "icon.svg"
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://fsweb.no/studentweb/velgInstitusjon.jsf*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://fsweb.no/studentweb/login.jsf*"],
+      "js": ["login.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_title": "StudentWeb Default Institution",
+    "default_icon": "icon.svg",
+    "default_popup": "options.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "studentweb-default-inst@local",
+      "strict_min_version": "109.0"
+    }
+  }
+}
