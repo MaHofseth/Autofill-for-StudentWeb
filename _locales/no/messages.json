@@ -3,7 +3,7 @@
     "message": "nb"
   },
   "extName": {
-    "message": "StudentWeb standardinstitusjon"
+    "message": "Autofill for StudentWeb"
   },
   "extDescription": {
     "message": "Husker institusjonen og innloggingsmetoden din i StudentWeb, og hopper over sidene som spør om dem."

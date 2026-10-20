@@ -1,4 +1,4 @@
-# StudentWeb Default Institution
+# Autofill for StudentWeb
 
 Firefox extension for [StudentWeb](https://fsweb.no/studentweb/) that remembers your institution and preferred login method.
 

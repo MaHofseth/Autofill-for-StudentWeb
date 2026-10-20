@@ -3,7 +3,7 @@
     "message": "en"
   },
   "extName": {
-    "message": "StudentWeb Default Institution"
+    "message": "Autofill for StudentWeb"
   },
   "extDescription": {
     "message": "Remembers your StudentWeb institution and login method, and skips the pages that ask for them."
