@@ -3,35 +3,58 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body { font: 14px system-ui, sans-serif; margin: 12px; min-width: 300px; }
-    label { display: block; margin: 10px 0 4px; }
-    select { width: 100%; padding: 4px; }
-    .row { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
-    .row label { margin: 0; }
-    button { margin-top: 12px; }
-    #status { color: #2a7; margin-left: 8px; }
-    .hint { color: #777; font-size: 12px; }
+    body { font: 14px system-ui, sans-serif; margin: 12px; width: 560px; }
+    .columns { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 20px; }
+    .field + .field { margin-top: 14px; }
+    .field > label { display: block; margin-bottom: 4px; font-weight: 600; }
+    .select-row { display: flex; gap: 6px; }
+    select { flex: 1; min-width: 0; padding: 4px; }
+    .options { border-left: 1px solid #ddd; padding-left: 16px; }
+    .options h2 { font-size: 14px; margin: 0 0 8px; }
+    .check { display: flex; gap: 8px; align-items: flex-start; }
+    .check + .check { margin-top: 10px; }
+    .check input { margin-top: 3px; }
+    #status { display: block; min-height: 1.2em; margin-top: 10px; color: #2a7; }
+    .hint { color: #777; font-size: 12px; margin: 6px 0 0; }
+    #methodNote { color: #b5651d; }
   </style>
 </head>
 <body>
-  <label for="inst">Default institution</label>
-  <select id="inst"></select>
+  <div class="columns">
+    <div>
+      <div class="field">
+        <label for="inst">Default institution</label>
+        <div class="select-row">
+          <select id="inst"></select>
+          <button id="clear" title="Clear saved institution">Clear</button>
+        </div>
+      </div>
 
-  <div class="row">
-    <input type="checkbox" id="auto">
-    <label for="auto">Skip the page and go straight to login</label>
+      <div class="field">
+        <label for="method">Default login method</label>
+        <div class="select-row">
+          <select id="method"></select>
+          <button id="clearMethod" title="Clear saved login method">Clear</button>
+        </div>
+        <p class="hint" id="methodNote" hidden></p>
+        <p class="hint">Feide and ID-porten are clicked for you. For fødselsnummer and PIN, the cursor is placed in the field; nothing is stored or filled in.</p>
+      </div>
+    </div>
+
+    <div class="options">
+      <h2>Skip pages</h2>
+      <div class="check">
+        <input type="checkbox" id="auto">
+        <label for="auto">Skip StudentWeb's institution page and go straight to login</label>
+      </div>
+      <div class="check">
+        <input type="checkbox" id="feideAuto">
+        <label for="feideAuto">On Feide's "choose affiliation" page, continue automatically</label>
+      </div>
+      <span id="status" role="status"></span>
+    </div>
   </div>
 
-  <label for="method">Default login method</label>
-  <select id="method">
-    <option value="">Ask me (do nothing)</option>
-    <option value="feide">Feide</option>
-    <option value="fnr">Fødselsnummer and PIN</option>
-    <option value="idporten">ID-porten</option>
-  </select>
-  <p class="hint">Feide and ID-porten are clicked for you. For fødselsnummer and PIN, the cursor is placed in the field; nothing is stored or filled in.</p>
-
-  <button id="clear">Clear saved institution</button><span id="status"></span>
   <script src="institutions.js"></script>
   <script src="options.js"></script>
 </body>
