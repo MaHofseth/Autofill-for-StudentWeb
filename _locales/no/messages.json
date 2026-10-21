@@ -3,7 +3,7 @@
     "message": "nb"
   },
   "extName": {
-    "message": "Autofill for StudentWeb"
+    "message": "Studentweb Pro"
   },
   "extDescription": {
     "message": "Husker institusjonen og innloggingsmetoden din i StudentWeb, og hopper over sidene som spør om dem."
@@ -104,7 +104,7 @@
     }
   },
   "avgRule": {
-    "message": "Vektet etter studiepoeng: A = 5, B = 4, C = 3, D = 2, E = 1. Ved forbedring teller bare den beste karakteren. Beregnet av Autofill for StudentWeb, ikke av StudentWeb."
+    "message": "Vektet etter studiepoeng: A = 5, B = 4, C = 3, D = 2, E = 1. Ved forbedring teller bare den beste karakteren. Beregnet av Studentweb Pro, ikke av StudentWeb."
   },
   "avgButton": {
     "message": "Oppdater"

@@ -1,6 +1,6 @@
 :warning: This plugin is almost entirely vibecoded. Take its results with a grain of salt.
 
-# StudentWeb Pro
+# Studentweb Pro
 Firefox and Chrome extension for adding quality of life features to Studentweb [StudentWeb](https://fsweb.no/studentweb/) and FEIDE. 
 
 - Choose a default institution for Studentweb and Feide.
