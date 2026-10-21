@@ -3,7 +3,7 @@
     "message": "nb"
   },
   "extName": {
-    "message": "Autofill for StudentWeb"
+    "message": "Studentweb Pro"
   },
   "extDescription": {
     "message": "Husker institusjonen og innloggingsmetoden din i StudentWeb, og hopper over sidene som spør om dem."
@@ -55,6 +55,9 @@
   "skipHeading": {
     "message": "Hopp over sider"
   },
+  "settings": {
+    "message": "Innstillinger"
+  },
   "skipInst": {
     "message": "Hopp over StudentWebs institusjonsside og gå rett til innlogging"
   },
@@ -66,5 +69,64 @@
   },
   "cleared": {
     "message": "Fjernet"
+  },
+  "avgTitle": {
+    "message": "Karaktersnitt"
+  },
+  "avgNone": {
+    "message": "Fant ingen bokstavkarakterer med studiepoeng på denne siden."
+  },
+  "avgValue": {
+    "message": "$ONE$ ($TWO$)",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "avgCounted": {
+    "message": "$ONE$ emner med bokstavkarakter, $TWO$ studiepoeng.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "avgOther": {
+    "message": "$ONE$ emner uten bokstavkarakter (bestått/ikke bestått eller ikke bestått ennå) telles ikke med.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      }
+    }
+  },
+  "avgRule": {
+    "message": "Vektet etter studiepoeng: A = 5, B = 4, C = 3, D = 2, E = 1. Ved forbedring teller bare den beste karakteren. Beregnet av Studentweb Pro, ikke av StudentWeb."
+  },
+  "avgButton": {
+    "message": "Oppdater"
+  },
+  "avgButtonHint": {
+    "message": "Åpner resultatsiden i StudentWeb for å regne ut på nytt. Du må kanskje logge inn først."
+  },
+  "avgNotYet": {
+    "message": "Ikke beregnet ennå"
+  },
+  "avgNotYetHint": {
+    "message": "Klikk Oppdater for å åpne resultatsiden og regne det ut."
+  },
+  "avgUpdated": {
+    "message": "Oppdatert $ONE$.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      }
+    }
   }
 }

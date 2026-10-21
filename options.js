@@ -58,6 +58,44 @@ async function renderMethods() {
   }
 }
 
+// The last average results.js saved for the chosen institution.
+async function renderAverage() {
+  const { averageByInst = {} } = await api.storage.local.get("averageByInst");
+  // With no institution chosen, show the most recently calculated one and
+  // name its institution.
+  let code = instSel.value;
+  if (!code) {
+    code = Object.keys(averageByInst).sort(
+      (a, b) => averageByInst[b].updated - averageByInst[a].updated
+    )[0];
+  }
+  const saved = code && averageByInst[code];
+  const prefix = !instSel.value && saved ? instName({ code, name: code }) + ": " : "";
+  const value = document.getElementById("avgValue");
+  const details = document.getElementById("avgDetails");
+  const lang = t("lang");
+  const num = (n, digits) =>
+    n.toLocaleString(lang, { minimumFractionDigits: digits, maximumFractionDigits: digits });
+
+  value.classList.toggle("empty", !saved?.average);
+  if (!saved) {
+    value.textContent = t("avgNotYet");
+    details.textContent = t("avgNotYetHint");
+    return;
+  }
+  const updated = t("avgUpdated", [
+    new Date(saved.updated).toLocaleString(lang, { dateStyle: "medium", timeStyle: "short" }),
+  ]);
+  if (saved.average === null) {
+    value.textContent = t("avgNone");
+    details.textContent = prefix + updated;
+    return;
+  }
+  value.textContent = t("avgValue", [num(saved.average, 2), saved.letter]);
+  const credits = num(saved.credits, saved.credits % 1 ? 1 : 0);
+  details.textContent = prefix + t("avgCounted", [String(saved.courses), credits]) + " " + updated;
+}
+
 async function render() {
   const { inst, autoContinue, feideAutoContinue, institutions = DEFAULT_INSTITUTIONS } =
     await api.storage.local.get(["inst", "autoContinue", "feideAutoContinue", "institutions"]);
@@ -73,12 +111,14 @@ async function render() {
   auto.checked = !!autoContinue;
   feideAuto.checked = !!feideAutoContinue;
   await renderMethods();
+  await renderAverage();
 }
 
 instSel.addEventListener("change", async () => {
   if (instSel.value) await api.storage.local.set({ inst: instSel.value });
   else await api.storage.local.remove("inst");
   await renderMethods();
+  await renderAverage();
   flash(t("saved"));
 });
 
@@ -109,6 +149,29 @@ document.getElementById("clearMethod").addEventListener("click", async () => {
   await api.storage.local.remove("loginMethod");
   await renderMethods();
   flash(t("cleared"));
+});
+
+const settingsToggle = document.getElementById("settingsToggle");
+settingsToggle.addEventListener("click", () => {
+  const settings = document.getElementById("settings");
+  settings.hidden = !settings.hidden;
+  settingsToggle.setAttribute("aria-expanded", String(!settings.hidden));
+});
+
+// Update while the popup is open, e.g. when the results page finishes.
+api.storage.onChanged.addListener((changes, area) => {
+  if (area === "local" && changes.averageByInst) renderAverage();
+});
+
+// Open the results page; results.js recalculates and saves the average there. If StudentWeb
+// asks for a login first, the flag sends the user on to the results page
+// afterwards.
+document.getElementById("average").addEventListener("click", async () => {
+  const { inst } = await api.storage.local.get("inst");
+  const host = inst === "FSUIO" ? "studentweb.uio.no" : "fsweb.no";
+  await api.storage.local.set({ pendingResults: Date.now() });
+  await api.tabs.create({ url: `https://${host}/studentweb/resultater.jsf` });
+  window.close();
 });
 
 render();

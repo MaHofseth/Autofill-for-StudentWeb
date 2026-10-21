@@ -3,7 +3,7 @@
     "message": "en"
   },
   "extName": {
-    "message": "Autofill for StudentWeb"
+    "message": "Studentweb Pro"
   },
   "extDescription": {
     "message": "Remembers your StudentWeb institution and login method, and skips the pages that ask for them."
@@ -55,6 +55,9 @@
   "skipHeading": {
     "message": "Skip pages"
   },
+  "settings": {
+    "message": "Settings"
+  },
   "skipInst": {
     "message": "Skip StudentWeb's institution page and go straight to login"
   },
@@ -66,5 +69,64 @@
   },
   "cleared": {
     "message": "Cleared"
+  },
+  "avgTitle": {
+    "message": "Grade average"
+  },
+  "avgNone": {
+    "message": "No letter grades with credits found on this page."
+  },
+  "avgValue": {
+    "message": "$ONE$ ($TWO$)",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "avgCounted": {
+    "message": "$ONE$ courses with letter grades, $TWO$ credits.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      },
+      "two": {
+        "content": "$2"
+      }
+    }
+  },
+  "avgOther": {
+    "message": "$ONE$ courses without a letter grade (pass/fail or not passed) aren't counted.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      }
+    }
+  },
+  "avgRule": {
+    "message": "Weighted by credits: A = 5, B = 4, C = 3, D = 2, E = 1. For a retaken course, only the best grade counts. Calculated by Studentweb Pro, not by StudentWeb."
+  },
+  "avgButton": {
+    "message": "Update"
+  },
+  "avgButtonHint": {
+    "message": "Opens StudentWeb's results page to recalculate. You may need to log in first."
+  },
+  "avgNotYet": {
+    "message": "Not calculated yet"
+  },
+  "avgNotYetHint": {
+    "message": "Click Update to open your results page and calculate it."
+  },
+  "avgUpdated": {
+    "message": "Updated $ONE$.",
+    "placeholders": {
+      "one": {
+        "content": "$1"
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extName__",
   "default_locale": "en",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "__MSG_extDescription__",
   "icons": {
     "16": "icons/icon-16.png",
@@ -23,6 +23,20 @@
         "https://studentweb.uio.no/studentweb/login.jsf*"
       ],
       "js": ["login.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://fsweb.no/studentweb/*",
+        "https://studentweb.uio.no/studentweb/*"
+      ],
+      "exclude_matches": [
+        "https://fsweb.no/studentweb/login.jsf*",
+        "https://fsweb.no/studentweb/velgInstitusjon.jsf*",
+        "https://studentweb.uio.no/studentweb/login.jsf*",
+        "https://studentweb.uio.no/studentweb/velgInstitusjon.jsf*"
+      ],
+      "js": ["results.js"],
       "run_at": "document_idle"
     },
     {
