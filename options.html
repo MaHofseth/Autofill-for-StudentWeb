@@ -17,6 +17,10 @@
     #status { display: block; min-height: 1.2em; margin-top: 10px; color: #2a7; }
     .hint { color: #777; font-size: 12px; margin: 6px 0 0; }
     #methodNote { color: #b5651d; }
+    .field-title { display: block; margin-bottom: 4px; font-weight: 600; }
+    .average-row { display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+    .average-value { font-size: 20px; font-weight: 600; }
+    .average-value.empty { font-size: 13px; font-weight: normal; color: #777; }
   </style>
 </head>
 <body>
@@ -38,6 +42,15 @@
         </div>
         <p class="hint" id="methodNote" hidden></p>
         <p class="hint" data-i18n="methodHint"></p>
+      </div>
+
+      <div class="field">
+        <span class="field-title" data-i18n="avgTitle"></span>
+        <div class="average-row">
+          <span id="avgValue" class="average-value"></span>
+          <button id="average" data-i18n="avgButton" data-i18n-title="avgButtonHint"></button>
+        </div>
+        <p class="hint" id="avgDetails"></p>
       </div>
     </div>
 
