@@ -1,13 +1,16 @@
-# Autofill for StudentWeb
+:warning: This plugin is almost entirely vibecoded. Take its results with a grain of salt.
 
-Firefox and Chrome extension for setting a default institution and login method in Feide and [StudentWeb](https://fsweb.no/studentweb/). 
+# StudentWeb Pro
+Firefox and Chrome extension for adding quality of life features to Studentweb [StudentWeb](https://fsweb.no/studentweb/) and FEIDE. 
 
 - Choose a default institution for Studentweb and Feide.
 - Choose a default login method on Studentweb and Feide.
+- Calculates average grade based on information in [StudentWebs resultater page] (https://fsweb.no/studentweb/resultater.jsf) 
 - Runs in Firefox and Chrome.
 - English or Norwegian, following the browser's language.
 
-Set everything from the toolbar icon.
+Settings are set in the toolbar icon.
+
 
 ## How to install the plugin locally
 

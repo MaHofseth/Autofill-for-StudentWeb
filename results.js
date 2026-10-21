@@ -13,6 +13,7 @@ const LETTERS = ["F", "E", "D", "C", "B", "A"];
 (async () => {
   const page = location.pathname.split("/").pop();
 
+  //Checks if the user on the resultater page
   if (page !== "resultater.jsf") {
     // The login and institution pages are handled by login.js / content.js.
     if (page === "login.jsf" || page === "velgInstitusjon.jsf") return;
