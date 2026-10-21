@@ -15,12 +15,12 @@ Settings are set in the toolbar icon.
 ## How to install the plugin locally
 
 ### Firefox
-1. Download the latest .xpi file from ["releases"](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases)
+1. Download the latest .xpi file from [Releases](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases)
 2. Drag the file into firefox
 3. Install
 
 ### Chrome
-1. Download the .zip from ["Releases"](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases) and unzip it.
+1. Download the .zip from [Releases](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases) and unzip it.
 2. Open chrome://extensions
 3. Turn on Developer mode (top right)
 4. Click Load unpacked and select the unzipped folder

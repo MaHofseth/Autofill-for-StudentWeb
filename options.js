@@ -151,6 +151,13 @@ document.getElementById("clearMethod").addEventListener("click", async () => {
   flash(t("cleared"));
 });
 
+const settingsToggle = document.getElementById("settingsToggle");
+settingsToggle.addEventListener("click", () => {
+  const settings = document.getElementById("settings");
+  settings.hidden = !settings.hidden;
+  settingsToggle.setAttribute("aria-expanded", String(!settings.hidden));
+});
+
 // Update while the popup is open, e.g. when the results page finishes.
 api.storage.onChanged.addListener((changes, area) => {
   if (area === "local" && changes.averageByInst) renderAverage();

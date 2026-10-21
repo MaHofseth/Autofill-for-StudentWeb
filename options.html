@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body { font: 14px system-ui, sans-serif; margin: 12px; width: 560px; }
-    .columns { display: grid; grid-template-columns: minmax(0, 1fr) 190px; gap: 20px; }
+    body { font: 14px system-ui, sans-serif; margin: 12px; width: 450px; }
+    .title-row { display: flex; align-items: center; gap: 8px; margin: 0 0 14px; padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+    .title-row img { border-radius: 5px; }
+    .title-row h1 { margin: 0; font-size: 16px; font-weight: 600; }
+    .icon-button { margin-left: auto; display: flex; padding: 4px; border: 0; border-radius: 6px; background: none; color: #666; cursor: pointer; }
+    .icon-button:hover, .icon-button[aria-expanded="true"] { background: #eee; color: #222; }
     .field + .field { margin-top: 14px; }
     .field > label { display: block; margin-bottom: 4px; font-weight: 600; }
     .select-row { display: flex; gap: 6px; }
     select { flex: 1; min-width: 0; padding: 4px; }
-    .options { border-left: 1px solid #ddd; padding-left: 16px; }
+    .options { margin: 0 0 14px; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; background: #f8f8f8; }
     .options h2 { font-size: 14px; margin: 0 0 8px; }
     .check { display: flex; gap: 8px; align-items: flex-start; }
     .check + .check { margin-top: 10px; }
@@ -24,49 +28,54 @@
   </style>
 </head>
 <body>
-  <div class="columns">
-    <div>
-      <div class="field">
-        <label for="inst" data-i18n="instLabel"></label>
-        <div class="select-row">
-          <select id="inst"></select>
-          <button id="clear" data-i18n="clear" data-i18n-title="clearInstTitle"></button>
-        </div>
-      </div>
+  <header class="title-row">
+    <img src="icons/icon-48.png" width="22" height="22" alt="">
+    <h1>Studentweb Pro</h1>
+    <button id="settingsToggle" class="icon-button" aria-expanded="false" aria-controls="settings" data-i18n-title="settings">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </header>
 
-      <div class="field">
-        <label for="method" data-i18n="methodLabel"></label>
-        <div class="select-row">
-          <select id="method"></select>
-          <button id="clearMethod" data-i18n="clear" data-i18n-title="clearMethodTitle"></button>
-        </div>
-        <p class="hint" id="methodNote" hidden></p>
-        <p class="hint" data-i18n="methodHint"></p>
-      </div>
-
-      <div class="field">
-        <span class="field-title" data-i18n="avgTitle"></span>
-        <div class="average-row">
-          <span id="avgValue" class="average-value"></span>
-          <button id="average" data-i18n="avgButton" data-i18n-title="avgButtonHint"></button>
-        </div>
-        <p class="hint" id="avgDetails"></p>
-      </div>
+  <div class="options" id="settings" hidden>
+    <h2 data-i18n="skipHeading"></h2>
+    <div class="check">
+      <input type="checkbox" id="auto">
+      <label for="auto" data-i18n="skipInst"></label>
     </div>
-
-    <div class="options">
-      <h2 data-i18n="skipHeading"></h2>
-      <div class="check">
-        <input type="checkbox" id="auto">
-        <label for="auto" data-i18n="skipInst"></label>
-      </div>
-      <div class="check">
-        <input type="checkbox" id="feideAuto">
-        <label for="feideAuto" data-i18n="feideAuto"></label>
-      </div>
-      <span id="status" role="status"></span>
+    <div class="check">
+      <input type="checkbox" id="feideAuto">
+      <label for="feideAuto" data-i18n="feideAuto"></label>
     </div>
   </div>
+
+  <div class="field">
+    <label for="inst" data-i18n="instLabel"></label>
+    <div class="select-row">
+      <select id="inst"></select>
+      <button id="clear" data-i18n="clear" data-i18n-title="clearInstTitle"></button>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="method" data-i18n="methodLabel"></label>
+    <div class="select-row">
+      <select id="method"></select>
+      <button id="clearMethod" data-i18n="clear" data-i18n-title="clearMethodTitle"></button>
+    </div>
+    <p class="hint" id="methodNote" hidden></p>
+    <p class="hint" data-i18n="methodHint"></p>
+  </div>
+
+  <div class="field">
+    <span class="field-title" data-i18n="avgTitle"></span>
+    <div class="average-row">
+      <span id="avgValue" class="average-value"></span>
+      <button id="average" data-i18n="avgButton" data-i18n-title="avgButtonHint"></button>
+    </div>
+    <p class="hint" id="avgDetails"></p>
+  </div>
+
+  <span id="status" role="status"></span>
 
   <script src="institutions.js"></script>
   <script src="options.js"></script>

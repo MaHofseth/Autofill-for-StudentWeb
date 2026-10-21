@@ -55,6 +55,9 @@
   "skipHeading": {
     "message": "Skip pages"
   },
+  "settings": {
+    "message": "Settings"
+  },
   "skipInst": {
     "message": "Skip StudentWeb's institution page and go straight to login"
   },

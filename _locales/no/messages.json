@@ -55,6 +55,9 @@
   "skipHeading": {
     "message": "Hopp over sider"
   },
+  "settings": {
+    "message": "Innstillinger"
+  },
   "skipInst": {
     "message": "Hopp over StudentWebs institusjonsside og gå rett til innlogging"
   },
