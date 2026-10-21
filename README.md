@@ -1,25 +1,26 @@
 # Autofill for StudentWeb
 
-Firefox extension for [StudentWeb](https://fsweb.no/studentweb/) that remembers your institution and preferred login method.
+Firefox and Chrome extension for setting a default institution and login method in Feide and [StudentWeb](https://fsweb.no/studentweb/). 
 
-- Preselects your institution on the "Choose institution" page (or skips it).
-- Switches StudentWeb to your saved institution if it remembered a different one.
-- Optional default login method: Feide or ID-porten is clicked for you; for fødselsnummer and PIN the cursor is placed in the field (nothing is stored or filled in). The popup only offers the methods your institution shows.
-- Preselects your institution on Feide's "choose affiliation" page, and can continue automatically.
-- Works with the University of Oslo's own StudentWeb at `studentweb.uio.no`.
+- Choose a default institution for Studentweb and Feide.
+- Choose a default login method on Studentweb and Feide.
 - Runs in Firefox and Chrome.
 - English or Norwegian, following the browser's language.
 
 Set everything from the toolbar icon.
 
-## Run locally
+## How to install the plugin locally
 
-Load temporarily via `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → `manifest.json`, or run with auto-reload:
+### Firefox
+1. Download the latest .xpi file from ["releases"](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases)
+2. Drag the file into firefox
+3. Install
 
-```bash
-npx web-ext run
-```
+### Chrome
+1. Download the .zip from ["Releases"](https://github.com/MaHofseth/Autofill-for-StudentWeb/releases) and unzip it.
+2. Open chrome://extensions
+3. Turn on Developer mode (top right)
+4. Click Load unpacked and select the unzipped folder
 
 ## Translations
-
 Texts live in `_locales/<lang>/messages.json`. `nb` is the Norwegian source; `no` (Chrome's code for Norwegian) and `nn` (nynorsk users get bokmål) are copies of it, so update all three together.
